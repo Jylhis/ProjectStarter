@@ -10,12 +10,10 @@
         <TextBlock x:Name="Title" Margin="10,10,10,390" TextWrapping="Wrap" RenderTransformOrigin="0.874,-2.404" TextAlignment="Center" FontSize="20"><Run Text="Mitäs tänään työstettäisiin"/><Run Text="?"/></TextBlock>
         <ListView x:Name="Project_List" Height="350" Margin="0,43,0,0" VerticalAlignment="Top">
         </ListView>
-        <Button x:Name="Close_Button" Content="Close" Margin="180,398,10,0" Background="#FFFF5858" Opacity="0.8" Height="20" VerticalAlignment="Top" Click="Close_Button_Click"/>
-        <Button x:Name="Settings_Name" Content="Settings" Margin="99,398,91,0" Height="20" VerticalAlignment="Top" IsEnabled="False"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,398,0,0" TextWrapping="Wrap" VerticalAlignment="Top">
-            <Hyperlink NavigateUri="http://example.org">About</Hyperlink>
-        </TextBlock>
+        <Button x:Name="Close_Button" Content="Sulje" Margin="180,398,10,0" Background="#FFFF5858" Opacity="0.8" Height="20" VerticalAlignment="Top" Click="Close_Button_Click"/>
+        <Button x:Name="Settings_Name" Content="Valitse Kansio" Margin="91,398,91,0" Height="20" VerticalAlignment="Top" Click="Edit_Folder_Path"/>
         <Rectangle Fill="#FFF4F4F5" MouseDown="Move_Window" Height="43" Stroke="Black" VerticalAlignment="Top" Opacity="0"/>
+        <CheckBox x:Name="Settings_Save" Content="Startup" HorizontalAlignment="Left" Margin="10,401,0,0" VerticalAlignment="Top" Unchecked="CheckBox_Checked" Checked="CheckBox_Checked"/>
 
     </Grid>
 </Window>
