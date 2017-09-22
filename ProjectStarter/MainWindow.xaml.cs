@@ -34,7 +34,7 @@ namespace ProjectStarter
             // Checkbox
             CheckBox check = ((CheckBox)FindName("Settings_Save"));
             RegistryKey rk = Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
-            if(rk.GetValue("ProjectStarter") != null)
+            if (rk.GetValue("ProjectStarter") != null)
             {
                 check.IsChecked = true;
             }
@@ -99,7 +99,14 @@ namespace ProjectStarter
                             || extension.Equals(".pro")
                             || extension.Equals(".csproj"))
                         {
-                            tmp_proj.Add(dir, file);
+                            try
+                            {
+                                tmp_proj.Add(dir, file);
+                            }
+                            catch (System.ArgumentException)
+                            {
+                                Debug.WriteLine("Duplicate");
+                            }
                         }
                     }
 
