@@ -97,7 +97,8 @@ namespace ProjectStarter
 
                         if (extension.Equals(".sln")
                             || extension.Equals(".pro")
-                            || extension.Equals(".csproj"))
+                            || extension.Equals(".csproj")
+                            || extension.Equals(".iml"))
                         {
                             try
                             {
